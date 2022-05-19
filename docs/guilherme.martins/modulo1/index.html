@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Busca de Usuário do Github</title>
-    <link href="./styles2.css" rel="stylesheet" type="text/css" />
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,22 +13,31 @@
   </head>
   <body>
     <h1>Pesquisa de usuário Github</h1>
-    <img src="./search.png" alt="logotipo de busca" />
+    <img src="./search.png" alt="logotipo de busca" onclick="easterEgg(this)" />
     <div>
       <div id="imgcontainer" class="imgcontainer"></div>
       <div id="profile" class="profile"></div>
-      <form class="form" id="caixa">
-        <input
-          type="text"
-          placeholder="Busca de usuário.."
-          name="search"
-          class="input"
-          id="search"
-        />
-        <button type="button" id="submit_btn" onclick="{getUserInfo()}">
-          Submit
-        </button>
-      </form>
+      <label for="name" class="searchLabel" id="box"
+        >Digite um usuário:
+        <form class="form" onsubmit="startSearch(event)">
+          <input
+            type="text"
+            placeholder="Busca de usuário..."
+            name="search"
+            class="input"
+            id="search"
+          />
+          <button type="submit" id="submit_btn">Submit</button>
+        </form>
+      </label>
+      <div id="error" class="error">
+        <p id="errorMessage"></p>
+        <button onclick="backToSearch()">Voltar</button>
+      </div>
+      <div id="repositories"></div>
+      <footer>
+        <button onclick="backToSearch()">Voltar</button>
+      </footer>
     </div>
     <script src="./main.js"></script>
   </body>
