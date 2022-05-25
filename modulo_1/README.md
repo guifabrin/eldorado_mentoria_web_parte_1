@@ -8,6 +8,9 @@ Nosso objetivo com este primeiro passo é compreender a estrutura básica de uma
 Constituir uma página WEB utilizando HTML5, CSS3 e Javascript que faça a busca de usuários e liste seus repositórios no Github. 
 Você pode estilizar a sua página do jeito que quiser, os exemplos apresentados não são mandatórios.
 
+### Git
+Fazer um fork deste projeto e na pasta docs criar uma pasta com seu nome de usuário e criar a pasta referente ao módulo.
+
 ### HTML - Página inicial
 Referência [https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics](https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics)
 

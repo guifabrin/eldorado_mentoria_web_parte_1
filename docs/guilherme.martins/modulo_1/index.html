@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Busca de Usuário do Github</title>
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Pesquisa de usuário Github</h1>
+    <img
+      src="./images/search.png"
+      alt="logotipo de busca"
+      onclick="easterEgg(this)"
+    />
+    <form class="form" onsubmit="search()">
+      <label for="name">Digite um usuário:</label>
+      <input
+        type="text"
+        placeholder="Busca de usuário..."
+        class="input"
+        id="searchText"
+      />
+      <button type="submit">Submit</button>
+    </form>
+
+    <footer>
+      <button onclick="backToSearch()">Voltar</button>
+    </footer>
+
+    <div class="profile"></div>
+
+    <div class="repositories"></div>
+
+    <div class="error"></div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
