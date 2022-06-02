@@ -3,15 +3,12 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'airbnb-base',
-  ],
+  extends: ['google', 'prettier'],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module',
+    parser: 'babel-eslint',
   },
   rules: {
-    "linebreak-style": 0,
-    "indent": ["error", 4]
+    'require-jsdoc': 'off',
   },
-};
+}
