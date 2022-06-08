@@ -38,7 +38,7 @@ function showRepos(repos){
         <section class="repo">
         <span><a target="_blank" class="repo__title"
             href="${repo.html_url}"><strong>${repo.name}</strong></a></span><br>
-        <span class="repo__lastUpdate">Ultima Atualização: 29/03/2022</span><br>
+        <span class="repo__lastUpdate">Ultima Atualização: ${Intl.DateTimeFormat('pt-BR').format(new Date(repo.updated_at))}</span>
         <span class="badge badge-primary">stars: ${repo.stargazers_count}</span>
         <span class="badge badge-secondary">watch: ${repo.watchers_count}</span>
         <span class="badge badge-success">forks ${repo.forks_count}</span>
