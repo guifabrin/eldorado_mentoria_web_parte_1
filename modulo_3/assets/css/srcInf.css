@@ -1,0 +1,135 @@
+
+.srcInf {
+    align-items: center;
+    background: #333648;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    justify-content: flex-start;
+    padding: 5px;
+}
+
+.srcInf__image {
+    border-radius: 50%;
+    padding-bottom: 10px;
+    height: 220px;
+    width: 220px;
+}
+
+.srcInf__information li {
+    font-family: 'roboto', sans-serif;
+    font-size: small;
+    font-weight: 300;
+    padding-top: .2em;
+    width: 200px;
+
+}
+
+.srcInf__information li::after {
+    border-bottom: 1px dashed #CCC;
+    content: "";
+    display: block;
+    padding-top: .2rem;
+}
+
+.srcInf__information__userCompany{
+    background-image:url(../img/building.svg);
+    background-position: left center    ;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.srcInf__information__userFollow{
+    background-image:url(../img/people-fill.svg);
+    background-position: left center    ;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.srcInf__information__userLocation{
+    background-image:url(../img/map.svg);
+    background-position: left center    ;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.srcInf__information__userLogin{
+    text-align: center;
+}
+
+.srcInf__information__userName{
+    background-image:url(../img/person-bounding-box.svg);
+    background-position: left center    ;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .srcInf__image {
+        border-radius: 50%;
+        padding-bottom: 10px;
+        height: 140px;
+        width: 140px;
+    }
+    .srcInf__information li {
+        font-family: 'roboto', sans-serif;
+        font-size:small;
+        font-weight: 100;
+        padding-top: .2em;
+        width: 120px;
+    }
+    
+    .srcInf__information__userCompany{
+        background-image:none;
+    }
+    
+    .srcInf__information__userFollow{
+        background-image:none;
+    }
+    
+    .srcInf__information__userLocation{
+        background-image:none;
+    }
+    
+    .srcInf__information__userName{
+        background-image:none;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .srcInf__image {
+        border-radius: 50%;
+        padding-bottom: 10px;
+        height: 120px;
+        width: 120px;
+    }
+    
+    .srcInf__information li {
+        font-family: 'roboto', sans-serif;
+        font-size:small;
+        font-weight: 100;
+        padding-top: .2em;
+        width: 100px;
+    }
+
+    .srcInf__information__userCompany{
+        background-image:none;
+    }
+    
+    .srcInf__information__userFollow{
+        background-image:none;
+    }
+    
+    .srcInf__information__userLocation{
+        background-image:none;
+    }
+    
+    .srcInf__information__userName{
+        background-image:none;
+    }
+  }
+
+
+
