@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+$primary-color: #2fa8cc;
+$secondary-color: #f4f4f4;
+$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+
+html {
+  font-family: 'League Spartan', sans-serif;
+  background-color: #061c31;
+  color: white;
+}
+h1 {
+  font-size: 60px;
+  text-align: center;
+  margin: 0;
+  background: #aa4b6b;
+  background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+  background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+h3 {
+  font-size: 40px;
+  text-align: center;
+}
+p {
+  font-size: 20px;
+  text-align: center;
+}
+div {
+  text-align: center;
+}
+body {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: #131313;
+  padding: 0 20px;
+  border: 3px solid black;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  padding: 25px;
+  max-width: calc(100% - 50px);
+}
+button {
+  background: #aa4b6b;
+  background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+  background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  cursor: pointer;
+  &:hover {
+    width: 210px;
+  }
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  label {
+    font-size: 30px;
+    padding: 10px;
+  }
+  input {
+    border: 0;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+  }
+}
+footer {
+  display: none;
+  justify-content: center;
+}
+a[href] {
+  color: white;
+}
+.error {
+  color: red;
+  font-size: 20px;
+  display: none;
+  color: red;
+  font-size: 20px;
+  justify-content: center;
+}
+.profile {
+  display: none;
+  justify-content: center;
+  .imageContainer {
+    display: inline-block;
+    vertical-align: text-top;
+    img {
+      max-width: 200px;
+    }
+  }
+  .profileContainer {
+    padding: 25px;
+    display: inline-block;
+    vertical-align: text-top;
+    p {
+      text-align: left;
+      margin: 0 0 25px 0;
+      label {
+        font-weight: bold;
+      }
+    }
+  }
+}
+.repositories {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  .project {
+    font-size: 30px;
+    color: #fff;
+    border: 1px solid gray;
+    padding: 25px;
+    margin: 25px;
+  }
+}
+.searchLabel {
+  font-size: 30px;
+}
