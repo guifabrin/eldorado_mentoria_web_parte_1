@@ -1,0 +1,24 @@
+{
+  "name": "modulo_1",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "lint": "npm run lint:js && npm run lint:html && npm run lint:css",
+    "lint:js": "npx eslint **/*.js --fix && npx prettier **/*.js --write",
+    "lint:html": "npx prettier **/*.html --write",
+    "lint:css": "npx prettier **/*.css --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2"
+  }
+}

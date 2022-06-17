@@ -45,16 +45,19 @@ function displayProfile({ name, avatar_url, company, followers, location }) {
   showElement(
     ".profile",
     `
-      <div class="imageContainer">
-        <img src="${avatar_url}" alt="Avatar do usuário do github" />
-      </div>
+      <section>
+        <h2>${name}</h2>
+        
+        <div class="imageContainer">
+          <img src="${avatar_url}" alt="Avatar do usuário do github" />
+        </div>
 
-      <div class="profileContainer">
-        <p><label>Nome Completo:</label> ${name}</p>
-        <p><label>Localização:</label> ${location}</p>
-        <p><label>Empresa:</label> ${company}</p>
-        <p><label>Número de Seguidores:</label> ${followers}</p>
-      </div>
+        <div class="profileContainer">
+          <p><label>Localização:</label> ${location}</p>
+          <p><label>Empresa:</label> ${company}</p>
+          <p><label>Número de Seguidores:</label> ${followers}</p>
+        </div>
+      </section>
     `
   );
 }
@@ -65,11 +68,11 @@ function displayRepos(repositories) {
     repositories
       .map(({ html_url, name, visibility, language }) => {
         return `
-            <div class='project'>
-              <a target='_blank' href='${html_url}'>${name}</a> 
+            <article class='project'>
+              <a target='_blank' href='${html_url}'><h3>${name}</h3></a> 
               <p>${visibility}</p>
-              <p>${language}</p>
-            </div>
+              <p>${language ? language : ''}</p>
+            </article>
           `;
       })
       .join("")

@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta name="title" content="Busca de Usuário do Github">
+    <meta name="description" content="Site de buscas de usuários do github">
+    <meta name="keywords" content="github, buscas">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Portuguese">
+    <meta name="author" content="Guilherme Martins Soares">
+    <meta name="email" content="gui.martins.soares@gmail.com">
+
+    <meta property="og:url" content="https://guifabrin.github.io/eldorado_mentoria_web/guilherme.martins/modulo_1/index.html" />
+    <meta property="og:title" content="Busca de Usuário do Github" />
+    <meta property="og:image" content="https://guifabrin.github.io/eldorado_mentoria_web/guilherme.martins/modulo_1/images/search.png" />
+    <meta property="og:description" content="Site de buscas de usuários do github" />
+
     <title>Busca de Usuário do Github</title>
     <link href="./styles.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,32 +25,38 @@
     />
   </head>
   <body>
-    <h1>Pesquisa de usuário Github</h1>
-    <img
-      src="./images/search.png"
-      alt="logotipo de busca"
-      onclick="easterEgg(this)"
-    />
-    <form class="form" onsubmit="search()">
-      <label for="name">Digite um usuário:</label>
-      <input
-        type="text"
-        placeholder="Busca de usuário..."
-        class="input"
-        id="searchText"
-      />
-      <button type="submit">Submit</button>
-    </form>
+    <header>
+      <h1>Pesquisa de usuário Github</h1>
 
+      <img
+        src="./images/search.png"
+        alt="Logotipo de busca"
+        onclick="easterEgg(this)"
+      />
+    </header>
+
+    <section>
+      <form class="form" onsubmit="search()">
+        <label for="name">Digite um usuário:</label>
+        <input
+          type="text"
+          placeholder="Busca de usuário..."
+          class="input"
+          id="searchText"
+        />
+        <button type="submit">Submit</button>
+      </form>
+
+      <div class="profile"></div>
+
+      <div class="repositories"></div>
+
+      <div class="error"></div>
+    </section>
+    
     <footer>
       <button onclick="backToSearch()">Voltar</button>
     </footer>
-
-    <div class="profile"></div>
-
-    <div class="repositories"></div>
-
-    <div class="error"></div>
 
     <script src="./main.js"></script>
   </body>

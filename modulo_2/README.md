@@ -2,12 +2,9 @@
 Bem-vindo ao segundo módulo da mentoria WEB
 
 ## Objetivo
-Nosso objetivo com este passo é compreender o que é um servidor WEB
+Nosso objetivo com este passo é compreender o que é um servidor WEB e colocar nossa página em um servidor local WEB e publicar nossa página no Github.
 
-## Objetivo final
-Colocar nossa página em um servidor local WEB e publicar nossa página no Github.
-
-### Servidor WEB
+## Servidor WEB
 Referência [https://tudosobrehospedagemdesites.com.br/servidor-web/](https://tudosobrehospedagemdesites.com.br/servidor-web/)
 
 Entender como publicar uma página é importante para prover aos usuários um ponto de entrada no nosso projeto. Leia a referência e resuma (10 linhas) sobre o que você entendeu.
@@ -17,7 +14,7 @@ Instale um dis servidores WEB abaixo e coloque sua página em funcionamento:
 - Nginx
 - IIS
 
-### Github
+## Github
 Referência [https://docs.github.com/pt/pages/getting-started-with-github-pages/creating-a-github-pages-site](https://docs.github.com/pt/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 
 Uma das formas de você guardar seu código e suas versões é utilizar um programa de versionamento. Neste módulo utilizaremos Git.
