@@ -1,0 +1,107 @@
+.btn {
+    margin: 1rem;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    background: #FF7A00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    transition: ease .3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: ease .3s;
+    cursor: pointer;
+}
+
+.personalInformation {
+    align-items: center;
+    background: #333648;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    justify-content: flex-start;
+    padding: 5px;
+}
+
+.personalInformation img {
+    border-radius: 50%;
+    padding-bottom: 10px;
+    height: 90%;
+    width: 100%;
+}
+
+.personalInformationList li {
+    font-family: 'roboto', sans-serif;
+    font-size: small;
+    font-weight: 300;
+    padding-top: .2em;
+    width: 200px;
+}
+
+.personalInformationList li::after {
+    border-bottom: 1px dashed #CCC;
+    content: "";
+    display: block;
+    padding-top: .2rem;
+}
+
+.userCompany, .userFollow, .userLocation, .userName, .userLogin {
+    background-position: left center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.userCompany {
+    background-image: url(../img/building.svg);
+}
+
+.userFollow {
+    background-image: url(../img/people-fill.svg);
+}
+
+.userLocation {
+    background-image: url(../img/map.svg);
+}
+
+.userLogin {
+    text-align: center;
+}
+
+.userName {
+    background-image: url(../img/person-bounding-box.svg);
+}
+
+@media screen and (max-width: 768px) {
+    .personalInformationList li {
+        font-family: 'roboto', sans-serif;
+        font-size: small;
+        font-weight: 100;
+        padding-top: .2em;
+        width: 120px;
+    }
+
+    .hidden {
+        background-image: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .personalInformationList li {
+        font-family: 'roboto', sans-serif;
+        font-size: small;
+        font-weight: 100;
+        padding-top: .2em;
+        width: 100px;
+    }
+
+    .hidden {
+        background-image: none;
+    }
+}

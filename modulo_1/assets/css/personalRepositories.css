@@ -1,0 +1,63 @@
+.repositoriesInformation {
+    background: #333648;
+    border-radius: 5px;
+    justify-content: center;
+    margin: 2px 10px 10px 0;
+    max-height: 100px;
+    padding: 8px;
+}
+
+.repositoriesInformation li::after {
+    border-bottom: 1px solid #CCC;
+    content: "";
+}
+
+.repositoriesInformation span {
+    padding: .2rem .3rem;
+    margin: 5px 0 0 0;
+}
+
+.repositoriesLastUpdate {
+    color: #CCC;
+    font-size: smaller;
+    font-family: 'Roboto', sans-serif;
+}
+
+.repositoriesTitle {
+    color: #fff;
+    font-size: large;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.repositoriesTitle:hover {
+    color: #ff7a00;
+    cursor: pointer;
+    transition: ease .7s;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem
+}
+
+.badgePrimary {
+    color: #fff;
+    background-color: #007bff
+}
+
+.badgeSecondary {
+    color: #fff;
+    background-color: #6c757d
+}
+
+.badgeSuccess {
+    color: #fff;
+    background-color: #28a745
+}

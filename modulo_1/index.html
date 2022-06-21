@@ -4,71 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <meta name="description" content="">
-
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/repo.css">
-    <link rel="stylesheet" href="assets/css/srcInf.css">
-    <link rel="stylesheet" href="assets/css/srcBar.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Poppins:wght@300&family=Roboto:wght@100;300;400&display=swap"
-        rel="stylesheet">
-
+    <title>GitSearch - Pesquisando Repositórios</title>
+    <meta name="description"
+          content="Página destinada à pesquisa de repositosrios contidos dentro do GitHub, busca atraves do nome do usuario">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/personalRepositories.css">
+    <link rel="stylesheet" href="./assets/css/personalInformation.css">
+    <link rel="stylesheet" href="./assets/css/searchBar.css">
 </head>
 
-<body class="containerTeste">
+<body>
+<section class="searchBar">
+    <div class="searchContainer">
+        <img src="./assets/img/gitsearch_2.png" alt="">
+        <input id="searchId" type="text" class="form " placeholder="Digite o usuário e precione enter..." required>
+    </div>
+</section>
 
-    <section class="srcBar ">
-        <div class="divBusca">
-            <img class="srcBar__image" src="./assets/img/gitsearch_2.png" alt="">
-            <i class="bi bi-search"></i>
-            <input id="search__id" type="text" class="form " placeholder="Nova Busca..." required>
-        </div>
-    </section>
+<section class="userInformation">
+    <section class="information"></section>
+    <section class="repositories"></section>
+</section>
 
-    <section class="inside">
-        <section class="inf">
-        <!--           
-                <section class="srcInf"><img class="srcInf__image" src="./assets/img/avatar.jpg" alt="">
-                <ul class="srcInf__information">
-                    <li class="srcInf__information__user"><i class="bi bi-person-bounding-box"></i> Guilherme Fabrin
-                    </li>
-                    <li class="srcInf__information__user"> gfmoreira</li>
-                    <li class=""><i class="bi bi-people-fill"></i> 12 Seguidores | 12 Seguindo</li>
-                    <li class=""><i class="bi bi-building"></i> Eldorado</li>
-                    <li class=""><i class="bi bi-map"></i> Porto Alegre</li>
-                </ul> 
-            </section>
-        -->
-        </section>
-
-        <section class="rep">
-        <!--
-            <section class="repo">
-                <span><a target="_blank" class="repo__title" href="https://github.com/guifabrin/carimbaria-biroia"><strong>CARIMBARIA-BIROIA</strong></a></span><br>
-                <span class="repo__lastUpdate">Ultima Atualização: 29/03/2022</span><br>
-                <span class="badge badge-primary">stars: 12</span>
-                <span class="badge badge-secondary">watch: 13</span>
-                <span class="badge badge-success">forks 13</span> 
-            </section>
-        -->
-        </section>
-    </section>
-
-    </section>
-    <script src="./assets/js/script.js"></script>
-
+<script src="./assets/js/script.js"></script>
 </body>
-
-
 </html>

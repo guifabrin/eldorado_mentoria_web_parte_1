@@ -1,33 +1,24 @@
-.bi-search {
-    color: white;
-}
-
 .form {
     background-color: transparent;
-    border: solid;
-    border-color: white;
+    border: white solid;
     border-radius: 10px;
+    color: white;
     font-style: italic;
     font-size: 12px;
-    color: white;
     height: 32px;
     padding-left: 15px;
     width: 260px;
 }
 
-.divBusca {
+.searchContainer, .searchBar {
+    align-items: center;
     background-color: #272a30;
-    padding: 5px 0 0 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 8px 0 0 0;
 }
 
-.srcBar {
-    background-color: #272a30;
-    padding: 5px 0 0 0;
-    text-align: center;
-}
-
-.srcBar__image{
+.searchContainer img {
     align-items: center;
     margin-right: 15px;
     max-width: 150px;
