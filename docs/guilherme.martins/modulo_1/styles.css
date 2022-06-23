@@ -41,11 +41,7 @@ body {
   width: 800px;
   margin: 0 auto;
   background-color: #131313;
-<<<<<<<< HEAD:docs/guilherme.martins/modulo1/styles.css
-  padding: 0 20px ;
-========
   padding: 25px;
->>>>>>>> 0156ff32ab2324130d6f9e16eb5a20585f6ed42b:docs/guilherme.martins/modulo_1/styles.css
   border: 3px solid black;
 }
 
@@ -136,26 +132,4 @@ footer {
 
 .profile .profileContainer p label {
   font-weight: bold;
-}
-
-.searchLabel {
-  font-size: 30px;
-}
-
-.error {
-  color: red;
-  font-size: 20px;
-  display: none;
-}
-
-#profile {
-  display: none;
-}
-
-#repositories {
-  display: none;
-}
-
-footer {
-  display: none;
 }
