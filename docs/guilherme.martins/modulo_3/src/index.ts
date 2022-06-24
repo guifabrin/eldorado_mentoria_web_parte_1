@@ -1,16 +1,11 @@
 import axios from 'axios'
 
 import './styles/main.scss'
-import search from './assets/search.png'
-
-const searchImg = document.getElementById('searchImg') as HTMLImageElement
 const searchForm = document.querySelector<HTMLFormElement>('form')
 const searchInput = document.querySelector<HTMLInputElement>('#searchText')
-const backButton = document.querySelectorAll('button')[1]
+const backButton = document.querySelector('#backButton')
 
 const url: string = 'https://api.github.com/users/'
-
-searchImg.src = search
 
 type User = {
   name: string
@@ -107,7 +102,7 @@ searchForm.addEventListener('submit', (e) => {
       return getUserRepo(username)
     })
     .then((userRepo) => displayRepos(userRepo))
-    .catch((_: any) => {
+    .catch((_) => {
       showElement('.error', 'Não foi possivel encontrar usuário!')
     })
     .finally(() => {
