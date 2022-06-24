@@ -1,14 +1,8 @@
 const path = require('./webpack.common.js');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
-
 
 module.exports = {
   entry: './src/index.ts',
-  mode: 'development',
+  mode: 'development', //production
   devtool: 'source-map',
   optimization: {
     usedExports: true
@@ -51,12 +45,6 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js']
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: '[name].[contenthash].css',
-      chunkFilename: '[id].css'
-    }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html'
