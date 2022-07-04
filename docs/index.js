@@ -6,15 +6,15 @@ const MODULOS = [
 ]
 
 async function resultadoExiste(usuario, modulo = 'modulo_1'){
-    const response = await fetch(`./${usuario}/${modulo}/index.html`)
-    return response.status == HTTP_STATUS_OK
+    const resposta = await fetch(`./${usuario}/${modulo}/index.html`)
+    return resposta.status == HTTP_STATUS_OK
 }
 
 function adquireMentorados(){
-    return fetch('./mentorados.json').then((response) => response.json()) 
+    return fetch('./mentorados.json').then((resposta) => resposta.json()) 
 }
 
-async function adquireModulosMentorados(mentorados){
+async function adquireModulos(mentorados){
     mentorados.sort()
     const resultados = {}
     for(const mentorado of mentorados) {
@@ -28,7 +28,7 @@ async function adquireModulosMentorados(mentorados){
     return resultados
 }
 
-function montarListaMentoradosModulos(resultado){
+function montarLista(resultado){
     const lista = document.querySelector('#mentorados')
     for (const nome in resultado){
         const listaModulos = []
@@ -48,13 +48,19 @@ function mostrarModulo(nome, modulo) {
     document.querySelector('#resultado').src = `./${nome}/${modulo}/index.html`
 }
 
-function carregarPagina(){
+function carregarPagina(resultados){
     const [, referencia] = document.location.href.split('#')
     if (!referencia) return
     const [nome, modulo] = referencia.split('-')
-    if (!nome || !modulo) return
+    if (!nome || !modulo || !resultados[nome] || resultados[nome].indexOf(modulo)==-1){
+        document.querySelector('#resultado').src = `./erro.html`
+        return
+    }
     mostrarModulo(nome, modulo)
 }
 
-carregarPagina()
-adquireMentorados().then(adquireModulosMentorados).then(montarListaMentoradosModulos)
+
+adquireMentorados().then(adquireModulos).then((resultados)=>{
+    montarLista(resultados)
+    carregarPagina(resultados)
+})

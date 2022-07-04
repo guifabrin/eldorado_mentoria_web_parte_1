@@ -5,9 +5,14 @@ body {
 
 #resultado {
     width: 100%;
-    height: calc(100vh - 190px);
+    height: calc(100vh - 210px);
 }
 
 .container-fluid, .row{
-    height: calc(100vh - 120px);
+    height: calc(100vh - 150px);
+}
+
+.row.reset{
+    height: auto;
+    margin-bottom: 25px;
 }
