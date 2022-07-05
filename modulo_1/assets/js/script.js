@@ -1,23 +1,25 @@
 const searchId = document.querySelector('#searchId');
-const profileResult = document.querySelector('.information');
-const profileRepos = document.querySelector('.repositories');
+const profileResult = document.querySelector('#information');
+const profileRepos = document.querySelector('#repositories');
 const url = "https://api.github.com/users";
 
 async function getProfileUser(user) {
-    return fetch(`${url}/${user}`).then(response => response.json()
-    )
+    return fetch(`${url}/${user}`)
+        .then(response => response.json()
+        )
 }
 
 async function getUserRepos(user) {
-    return fetch(`${url}/${user}/repos`).then(response => response.json()
-    )
+    return fetch(`${url}/${user}/repos`)
+        .then(response => response.json()
+        )
 }
 
 function showProfile(user) {
     profileResult.innerHTML = `
         <section class="personalInformation">
             <section>
-                <img src="${user.avatar_url}" alt="">
+                <img src="${user.avatar_url}" alt="Avatar do usuário">
             </section>
             <ul class="personalInformationList">
                 <li class="userName hidden">  ${user.name}</li>
@@ -26,8 +28,8 @@ function showProfile(user) {
                 <li class="userCompany hidden">  ${user.company}</li>
                 <li class="userLocation hidden">  ${user.location}</li>
             </ul>
-            <div class="btn">
-                <a href="${user.html_url}" target="_blank" class="btn btn-warning btn-block">Ver Perfil</a>
+            <div class="buttonProfile">
+                <a href="${user.html_url}" target="_blank" class="buttonProfile">Ver Perfil</a>
             </div>
         </section>`;
 }
@@ -46,11 +48,20 @@ function showRepos(repos) {
     profileRepos.innerHTML = output;
 }
 
-searchId.addEventListener("keypress", (event) => {
-    const user = event.target.value;
+function search(){
+    event.preventDefault();
+    const user = searchId.value;
 
-    if (event.keyCode == 13) {
-        getProfileUser(user).then(showProfile).catch((error) => mostrarError());
-        getUserRepos(user).then(showRepos).catch((error) => mostrarError());
-    }
-})
+    getProfileUser(user)
+
+        .then(showProfile)
+        .catch((error) =>
+            alert("Usuário não encontrado")
+        );
+
+    getUserRepos(user)
+        .then(showRepos)
+        .catch((error) =>
+            alert("Usuário não encontrado")
+        );
+}
