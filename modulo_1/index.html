@@ -14,18 +14,21 @@
 </head>
 
 <body>
-<section class="searchBar">
-    <div class="searchContainer">
-        <img src="./assets/img/gitsearch_2.png" alt="">
-        <input id="searchId" type="text" class="form " placeholder="Digite o usuário e precione enter..." required>
-    </div>
-</section>
+    <aside class="searchBar">
+        <div class="searchContainer">
+            <img src="./assets/img/gitsearch_2.png" alt="Logo do GitSearch">
+            <form onsubmit="search()">
+                <input type="text" id="searchId" placeholder="Digite o usuário..."/>
+                <button type="submit" class="btnSearch">Procurar</button>
+            </form>
+        </div>
+    </aside>
 
-<section class="userInformation">
-    <section class="information"></section>
-    <section class="repositories"></section>
-</section>
+    <section class="userInformation">
+        <section id="information"></section>
+        <section id="repositories"></section>
+    </section>
 
-<script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
