@@ -9,6 +9,9 @@ Bem-vindo ao primeiro módulo da mentoria WEB!
 ## Git
 Faça um fork deste projeto para poder trabalhar com pull requests.
 
+![Fluxo do Git](fluxo_git.png)
+
+
 ## HTML - Página inicial
 Referência [https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics](https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics)
 
