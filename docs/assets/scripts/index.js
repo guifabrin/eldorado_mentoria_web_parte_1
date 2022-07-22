@@ -1,15 +1,3 @@
-const HTTP_STATUS_OK = 200
-const MODULOS = [
-    'modulo_1',
-    'modulo_3',
-    'tarefa_1'
-]
-
-async function resultadoExiste(usuario, modulo = 'modulo_1') {
-    const resposta = await fetch(`./${usuario}/${modulo}/index.html`)
-    return resposta.status == HTTP_STATUS_OK
-}
-
 async function adquireArquivos() {
     const { tree } = await fetch('https://api.github.com/repos/guifabrin/eldorado_mentoria_web/git/trees/master?recursive=1').then((resposta) => resposta.json())
     const arquivos = tree.filter(({ path }) => path.indexOf('index.html') > -1)
@@ -33,7 +21,7 @@ function montarLista(resultado) {
             listaModulos.push(`<li><a href="#${nome}-${modulo}" onclick="mostrarModulo('${localizacao}')">${modulo}</a></li>`)
         }
         lista.innerHTML += `<li>
-            <h3>${nome}</h3>
+            <h3>${nome.split('.').join(' ')}</h3>
             <ul>
                 ${listaModulos.join('')}
             </ul>
@@ -45,18 +33,20 @@ function mostrarModulo(localizacao) {
     document.querySelector('#resultado').src = `./${localizacao}`
 }
 
+function mostrarErro() {
+    document.querySelector('#resultado').src = `./erro.html`
+}
+
 function carregarPagina(resultados) {
     const [, referencia] = document.location.href.split('#')
     if (!referencia) return
     const [nome, modulo] = referencia.split('-')
     if (!nome || !modulo || !resultados[nome]) {
-        document.querySelector('#resultado').src = `./erro.html`
-        return
+        throw new Error()
     }
     const filtrados = resultados[nome].filter(([_modulo]) => _modulo == modulo)
     if (!filtrados.length) {
-        document.querySelector('#resultado').src = `./erro.html`
-        return
+        throw new Error()
     }
     const [, localizacao] = filtrados[0]
     mostrarModulo(localizacao)
@@ -65,6 +55,4 @@ function carregarPagina(resultados) {
 adquireArquivos().then((resultados) => {
     montarLista(resultados)
     carregarPagina(resultados)
-}).catch(()=>{
-    document.querySelector('#resultado').src = `./erro.html`
-})
+}).catch(mostrarErro)
