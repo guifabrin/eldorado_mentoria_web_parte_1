@@ -5,51 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/docs/franciele.franco/Modulo_1/style/git_style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style/git_style.css">
+
+    <title>Site pesquisa de usuário do Github</title>
 </head>
 
 <body>
     <header>
-        
         <div class="git">
-            <img class="logo_git" src="./imags/logo_git.png" alt="logo git">
+          <img class="logo_git" src="./imags/logo_git.png" alt="logo git">
         </div>
-       
-        <div class="link_git">
-            <a href="/docs/franciele.franco/Modulo_1/git_clone.html">Inicio</a>
-            <a href="/docs/franciele.franco/Modulo_1/git_sobre.html">Sobre</a>
+
+        <div class='pesquisa'>
+            <p class="letra_s">S</p>
+            <p class="letra_e">E</p>
+            <p class="letra_a">A</p>
+            <p class="letra_r">R</p>
+            <p class="letra_c">C</p>
+            <p class="letra_h">H</p>
         </div>
     </header>
 
     <main>
-        <div class="perfil">
-            <img class="image_perfil" src="./imags/OIP.jpeg" alt="foto perfil">
-            <h1><strong>Franciele Franco</strong></h1>
-            <h3>franciele.franco</h3>
+        <h1>Pesquisa de usuário Github</h1>
+        <div class="repositorio">
             
-            <br>
-            <p>Butiá-RS</p>
-            <br>
-            <p> &#x1F4E7 fran.alves1108@gmail.com</p>
-            <hr>
-        </div>
-
-        <div class="repository">
-            <h1>Repositórios</h1>
             <input type="text" id="usuario" autofocus>
-            <button id="pesquisar" onclick="pesquisar()">Pesquisar</button>
-            <ul></ul>
-          
+            
+            <button id="botao_pesquisa" onclick="pesquisar()">Pesquisar</button>
+
+            <ul></ul>  
         </div>
     </main>
 
     <footer>
-        <div class="link_footer"></div>
-            <img class="logo_git" src="./imags/logo_git.png" alt=""> &copy; 2022 GitHub, Inc
+        <p>Projeto Desenvolvido na Mentoria Web, 2022</p>
     </footer>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>  
-    <script src="/docs/franciele.franco/Modulo_1/script.js"></script>
+    
+    <script src="./script/script.js"></script>
 </body>
 
 </html>
