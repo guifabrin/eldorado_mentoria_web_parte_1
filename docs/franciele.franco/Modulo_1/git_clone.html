@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="./style/git_style.css">
 
     <title>Site pesquisa de usuário do Github</title>
@@ -12,18 +13,20 @@
 
 <body>
     <header>
+        
         <div class="git">
           <img class="logo_git" src="./imags/logo_git.png" alt="logo git">
         </div>
 
-        <div class='pesquisa'>
-            <p class="letra_s">S</p>
-            <p class="letra_e">E</p>
-            <p class="letra_a">A</p>
-            <p class="letra_r">R</p>
-            <p class="letra_c">C</p>
-            <p class="letra_h">H</p>
-        </div>
+        <div class='letra_do_search'>
+            <span class="cor1">S</span>
+            <span class="cor2">E</span>
+            <span class="cor3">A</span>
+            <span class="cor4">R</span>
+            <span class="cor5">C</span>
+            <span class="cor6">H</span>
+        </div> 
+
     </header>
 
     <main>
@@ -32,17 +35,18 @@
             
             <input type="text" id="usuario" autofocus>
             
-            <button id="botao_pesquisa" onclick="pesquisar()">Pesquisar</button>
+            <button id="pesquisar" onclick="pesquisar()">Pesquisar</button>
 
             <ul></ul>  
+
         </div>
     </main>
 
     <footer>
         <p>Projeto Desenvolvido na Mentoria Web, 2022</p>
     </footer>
-    
-    <script src="./script/script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
+
