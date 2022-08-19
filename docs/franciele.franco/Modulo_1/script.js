@@ -1,63 +1,68 @@
-usuario.addEventListener("keydown", function (e) { //Adiciona a função de quando aperta enter algo acontece
-    if (e.keyCode === 13) { 
+
+//declaração de variaveis
+  const usuario = document.querySelector('input#usuario')
+
+  usuario.addEventListener("keydown", function (evento) 
+{  const ENTER_KEY_CODE = 13
+  if (evento.keycode === ENTER_KEY_CODE)
+    { 
         pesquisar()
     }
 })
 
-function pesquisar(){
-    var usuario = document.querySelector('input#usuario')
-    var lista = document.querySelector('ul')
-    url = `https://api.github.com/users/${usuario.value}/repos`
+  function pesquisar()
+{
+  url = `https://api.github.com/users/${usuario.value}/repos`
+    
+  if(usuario.value)
+    { 
+      return getApiGitHub()
+    }
 
-    if(usuario.value == ''){
-        alert('Por favor, digite algo!')
+  else
+   { 
+    alert('Por favor, digite algo!')
+   }
+}     
+
+  const ul = document.querySelector('ul')
+
+  function getApiGitHub() 
+{
+  fetch(url)
+  .then(async res => 
+  {  
+    if(!res.ok) 
+    {
+      throw new Error(res.status)
     }
-    else{
-        function renderizarLI(name, link){
-            let liElemento = document.createElement('li')
-            let liTexto = document.createTextNode(name)
+    ////retornar uma promessa
+    const data = await res.json()
+    
+    data.map(item => 
+    {
+      let lista = document.createElement('li')
             let aElemento = document.createElement('a')
-            let aTexto = document.createTextNode('Clique aqui')
-            aElemento.setAttribute('href', link)
-            liElemento.appendChild(liTexto)
-            aElemento.appendChild(aTexto)
-            liElemento.appendChild(aElemento)
-            lista.appendChild(liElemento)
-        }
-        function renderizarLISemLink(name){
-            let liElemento = document.createElement('li')
-            let liTexto = document.createTextNode(name)
-            liElemento.appendChild(liTexto)
-            lista.appendChild(liElemento)
-        }
+          
+      lista.innerHTML = ` 
+     
+        <strong>${item.name.toUpperCase()}</strong>
+        <br>
+        <br>
+        <span>${item.url}</span>
+        <br>
+        <br>
+        <span>Data Criação: 
+        ${Intl.DateTimeFormat('pt-BR')
+        .format(new Date(item.created_at))}
+        </span>
+          `
+          ul.appendChild(lista)
+    })
     
-        function apagarUL(){
-            lista.innerHTML = ''
-        }
-    
-        apagarUL()
-        renderizarLISemLink('Carregando...')
-    
-        axios.get(url)
-            .then(function(response){
-                apagarUL()
-                let tamanhoLista = response.data.length
-                usuario.value = ''
-                if (tamanhoLista == 0){
-                    renderizarLISemLink('Sem repositório!')
-                }
-                for(let c = 0; c <= tamanhoLista; c++){
-                    var nameLista = response.data[c].name
-                    var link = response.data[c].html_url
-                    renderizarLI(nameLista, link)
-                }
-            })
-            .catch(function(error){
-                if(error == 'Error: Request failed with status code 404'){
-                    apagarUL()
-                    renderizarLI('Erro 404 - Não existe este USER')
-                }
-            })
-    }
-    
+  }).catch(evento => console.log(evento))
 }
+    
+   
+   
+
