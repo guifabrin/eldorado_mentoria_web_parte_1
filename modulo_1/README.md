@@ -30,7 +30,6 @@ Referência [https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with
 Com a utilização do método nativo fetch em Javascript utilize a API do GITHUB https://developer.github.com/v3/ consumindo os seguintes endpoints:
 - Endpoint user: https://api.github.com/users/USER_GITHUB
 - Endpoint repos: https://api.github.com/users/USER_GITHUB/repos
-- Endpoint starred: https://api.github.com/users/USER_GITHUB/starred{/owner}{/repo}
 
 ## Dica
 - Se utilizar de um formatador de arquivos ou de técnicas de clean code pode ajudar a ter uma visão melhor do seu projeto.
