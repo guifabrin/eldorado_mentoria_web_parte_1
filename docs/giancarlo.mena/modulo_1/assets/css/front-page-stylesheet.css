@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#title {
+    font-size: 60px;
+    font-family: Helvetica, serif;
+}
+
+#git-logo {
+    height: 150px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+#name {
+    width: 450px;
+    margin-right: 3px;
+    padding: 5px;
+}
+
+#search-button {
+    width: 60px;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.input {
+    height: 30px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 0 rgba(35, 35, 35, 0.3);
+    margin-bottom: 15px;
+}
+.block {
+    text-align: center;
+    background: lightgray;
+    min-height: 80vh;
+    width: 60%;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 0.3));
+    -webkit-box-shadow: -10px 0px 13px -7px #2a2a2a, 10px 0px 13px -7px #2a2a2a, 5px 5px 5px 5px rgba(35,35,35,0.3);
+    box-shadow: -10px 0px 13px -7px #2a2a2a, 10px 0px 13px -7px #2a2a2a, 5px 5px 5px 5px rgba(35,35,35,0.3);
+    border-radius: 40px ;
+    padding-top: 70px;
+}
+
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to right top, #3b8d99, #2fa8cc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

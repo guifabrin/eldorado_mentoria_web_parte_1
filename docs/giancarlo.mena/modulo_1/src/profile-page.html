@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub Profile Page</title>
+    <link rel="stylesheet" href="../assets/css/profile-page-stylesheet.css">
+</head>
+<body>
+    <div class="user-data">
+        <div class="profile">
+            <img id="profile-image" src="" alt="Profile Image">
+            <h1 id="name"></h1>
+            <h3 id="username"></h3>
+            <button id="edit-profile">Edit profile</button>
+        </div>
+
+        <div class="user-info">
+            <h3 id="follow-info"></h3>
+            <ul class="infos"></ul>
+        </div>
+    </div>
+
+    <div class="user-repos">
+        <input id="search-repos" type="text" placeholder="Digite o nome do repositório aqui...">
+        <ul class="repository-list"></ul>
+    </div>
+
+
+    <script src="../assets/scripts/get-user-data.js"></script>
+    <script src="../assets/scripts/easter-eggs.js"></script>
+</body>
+</html>
