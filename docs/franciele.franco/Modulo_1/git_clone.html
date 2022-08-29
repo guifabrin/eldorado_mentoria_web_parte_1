@@ -30,22 +30,24 @@
     </header>
 
     <main>
-        <h1>Pesquisa de usuário Github</h1>
+        <h1>Pesquisa de usuário do Github</h1>
         <div class="repositorio">
             
-            <input type="text" id="usuario" autofocus>
-            
-            <button id="pesquisar" onclick="pesquisar()">Pesquisar</button>
-
-            <ul></ul>  
-
-        </div>
+            <div class="resultado">
+                <input type="text" class="busca_usuario" required id="usuario"
+                placeholder="Faça sua Pesquisa">
+           </div>
+   
+           <div id="perfil"></div>  
+       </div>
     </main>
 
     <footer>
         <p>Projeto Desenvolvido na Mentoria Web, 2022</p>
     </footer>
+
     <script src="./script.js"></script>
+    
 </body>
 
 </html>
