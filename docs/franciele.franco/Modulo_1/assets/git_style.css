@@ -14,12 +14,6 @@
 html {
   height: 100%;
 }
-/*
-*{
-  margin: 0;
-  padding: 0;
-  border: 0;
-}*/
 
 body{
   background: var(--color_background_body);
@@ -35,34 +29,67 @@ header{
   color: var(--color_lyrics);
 }
 
+main{
+  background-color:var(--color_background_body);
+  margin: 5% 10%;
+  padding: 0%;
+}
+
+
+footer{
+  background-color:  var(--color_background_footer);
+  text-align: center;
+  align-items: center;
+  padding: 1.1%;
+  width: 100%;
+  margin: auto;
+  bottom: 0;
+}
+
+#usuario{
+  margin: 0 0 0 0;
+  padding: 15px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: var(--color_backgroud_header); 
+  color: var(--color_lyrics);
+}
+#botao{
+  padding: 1.10%;
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--color_lyrics);
+  border: 2px solid black;
+  background-color: var(--color_backgroud_header);
+}
+
 .letra_do_pesquisa{
-  margin-left: 32%;
-  margin-bottom: 0%;
+  margin: 0 32% 0 32%;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   display: flex;  
 }
 
-.cor1, .cor4{
+.cor_azul_letra {
   color: blue;
   font-size: 120px;
   font-family: Arial;
 }
 
-.cor2, .cor6{
+.cor_vermelha_letra{
   color: red;
   font-size: 120px;
   font-family: Arial;
 }
 
-.cor3{
+.cor_amarela_letra{
   color: yellow;
   font-size: 120px;
   font-family: Arial;
 }
 
-.cor5{
+.cor_verde_letra{
   color: green;
   font-size: 120px;
   font-family: Arial;
@@ -78,36 +105,19 @@ header{
   border-radius: 50px;
 }
 
-main{
-  background-color:var(--color_background_body);
-  margin: 5% 10%;
-  padding: 0%;
-}
-
 h1{
   color: var(--color_lyrics);
   text-align: center;
-  margin-left: 1%;
-  margin-top: 0%;
-  margin-bottom: 0%;
+  margin: 0 1% 0 0;
 }
 
 .repositorio{
   padding: 2%;
-  margin-left: 2%;
+  margin: 0 2% 0 0;
   align-items: center;
   text-align: center;
   color: var(--color_lyrics);
   background-color: var(--color_background_body);
-}
-
-#usuario{
-  margin: 0 0 0 0%;
-  padding: 15px;
-  border-radius: 5px;
-  border: 2px solid black;
-  background-color: var(--color_backgroud_header); 
-  color: var(--color_lyrics);
 }
 
 .imagem_usuario{
@@ -121,7 +131,7 @@ h1{
 
 .ver_perfil a{ 
   align-items: center;
-  margin-top: 0%;
+  margin-top: 0;
   font-size: 30px;
   font-family: Arial;
   color: var(--color_lyrics);
@@ -129,8 +139,7 @@ h1{
 }
 
 .lista_repositorio ul{
-  margin-left: 100%;
-  margin: 30px;
+  margin: 30px 100px 0 30px;
   color: var(--color_lyrics);
   text-decoration: none;
   font-size: 20px;
@@ -150,12 +159,4 @@ h1{
   font-size: 20px;
 }
 
-footer{
-  background-color:  var(--color_background_footer);
-  text-align: center;
-  align-items: center;
-  padding: 1.1%;
-  width: 100%;
-  margin: auto;
-  bottom: 0;
-}
+
