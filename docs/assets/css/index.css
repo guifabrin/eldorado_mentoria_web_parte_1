@@ -1,0 +1,32 @@
+body {
+    padding: 60px;
+    height: 100vh;
+}
+
+h3 {
+    font-size: calc(1rem + .6vw);
+    text-transform: capitalize;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+ul li ul {
+    padding-left: 2rem;
+}
+
+#resultado {
+    width: 100%;
+    height: calc(100vh - 210px);
+}
+
+.container-fluid, .row{
+    height: calc(100vh - 150px);
+}
+
+.row.reset{
+    height: auto;
+    margin-bottom: 25px;
+}
