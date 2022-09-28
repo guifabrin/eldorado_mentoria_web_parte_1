@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="title" content="Busca de Usuário do Github">
+    <meta name="description" content="Site de buscas de usuários do github">
+    <meta name="keywords" content="github, buscas">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Portuguese">
+    <meta name="author" content="Guilherme Martins Soares">
+    <meta name="email" content="gui.martins.soares@gmail.com">
+
+    <meta property="og:url" content="https://guifabrin.github.io/eldorado_mentoria_web/guilherme.martins/modulo_3/src/index.html" />
+    <meta property="og:title" content="Busca de Usuário do Github" />
+    <meta property="og:image" content="https://guifabrin.github.io/eldorado_mentoria_web/guilherme.martins/modulo_3/src/assets/search.png" />
+    <meta property="og:description" content="Site de buscas de usuários do github" />
+
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Site de Busca a Usuário Github</title>
+  </head>
+  <body>
+    <img id="searchImg" src="./assets/search.png" alt="Search" title="Logo do site" />
+    <h3>Busca de usuário Github</h3>
+    <form class="form">
+      <label for="name">Digite um usuário:</label>
+      <input
+        type="text"
+        placeholder="Busca de usuário..."
+        class="input"
+        id="searchText"
+      />
+      <button type="submit">
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        Procurar!
+      </button>
+    </form>
+
+    <div class="profile"></div>
+
+    <div class="repositories"></div>
+
+    <div class="error"></div>
+
+    <footer>
+      <button id="backButton">Voltar</button>
+    </footer>
+  </body>
+</html>
