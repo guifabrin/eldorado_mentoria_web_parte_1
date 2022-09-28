@@ -84,7 +84,6 @@ botao.addEventListener('click', event =>
   else
   {
     alert('Por favor, digite o nome do usuário!')
-    //console.log(event.target)
   }
   })
 }
