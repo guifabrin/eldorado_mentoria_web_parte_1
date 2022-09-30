@@ -665,7 +665,7 @@ function ligar(comodo, aparelho) {
                 $('#' + comodo + aparelho).css('background-image',
                     "url(./assets/images/simulador/Eletros/" + aparelho + "on" + extension + ")");
             } else {
-                if (aparelho != "chuveiro" || aparelho != "coifa") {
+                if (aparelho != "chuveiro" && aparelho != "coifa") {
                     $('#' + comodo+ aparelho)
                         .attr('src', "./assets/images/simulador/Eletros/" + aparelho + "on" + extension);
                 }
@@ -676,7 +676,7 @@ function ligar(comodo, aparelho) {
         
         objetoAparelho['status'] = 1;
     } else {
-        if (aparelho != "chuveiro" || aparelho != "coifa"){
+        if (aparelho != "chuveiro" && aparelho != "coifa"){
             if (browser == "Chrome" || browser == "Safari") {
                 $('#' + comodo + aparelho).css('background-image',
                     "url(./assets/images/simulador/Eletros/" + aparelho + "off" + extension + ")");
