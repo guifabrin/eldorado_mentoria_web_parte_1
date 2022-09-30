@@ -128,26 +128,26 @@ function preencheObjeto(objeto, caminhoChave, valor) {
 		if (!(chave in objeto)){
 			objeto[chave] = {}
 		}
-		const objeto = objeto[chave];
+		 objeto = objeto[chave];
 	}
 	objeto[caminhoChave[ultimoIndiceChave]] = valor;
 }
 
 
 
-let eletro1 = {};
+let eletro = {};
 
-preencheObjeto(eletro1, ['Sala'], ['luz','tv','game','dvd','som','climatizador']);
-preencheObjeto(eletro1, ['Cozinha'], ['luz','geladeira', 'microondas','forno','coifa']);
-preencheObjeto(eletro1, ['Lavanderia'], ['luz', 'mqlavar', 'mqsecar']);
-preencheObjeto(eletro1, ['Quarto'], ['luz', 'tv','climatizador']);
-preencheObjeto(eletro1, ['Quarto2'], ['luz','abajur']);
-preencheObjeto(eletro1, ['Banheiro'], ['luz','chuveiro']);
-preencheObjeto(eletro1, ['Banheiro1'], ['luz','chuveiro']);
-preencheObjeto(eletro1, ['Escritorio'], ['luz','abajur','computador']);
-preencheObjeto(eletro1, ['Quarto3'], ['luz']);
+preencheObjeto(eletro, ['Sala'], ['luz','tv','game','dvd','som','climatizador']);
+preencheObjeto(eletro, ['Cozinha'], ['luz','geladeira', 'microondas','forno','coifa']);
+preencheObjeto(eletro, ['Lavanderia'], ['luz', 'mqlavar', 'mqsecar']);
+preencheObjeto(eletro, ['Quarto'], ['luz', 'tv','climatizador']);
+preencheObjeto(eletro, ['Quarto2'], ['luz','abajur']);
+preencheObjeto(eletro, ['Banheiro'], ['luz','chuveiro']);
+preencheObjeto(eletro, ['Banheiro1'], ['luz','chuveiro']);
+preencheObjeto(eletro, ['Escritorio'], ['luz','abajur','computador']);
+preencheObjeto(eletro, ['Quarto3'], ['luz']);
 
-preencheObjeto(eletro1, ['Sala', 'luz'], {
+preencheObjeto(eletro, ['Sala', 'luz'], {
     status: 0,
     dqtd: 1,
     dwat: 25,
@@ -160,7 +160,7 @@ preencheObjeto(eletro1, ['Sala', 'luz'], {
     total: 0,
     completo: 'Lâmpada'
 });
-preencheObjeto(eletro1, ['Sala', 'tv'], {
+preencheObjeto(eletro, ['Sala', 'tv'], {
     status: 0,
     dqtd: 1,
     dwat: 135,
@@ -173,7 +173,7 @@ preencheObjeto(eletro1, ['Sala', 'tv'], {
     total: 0,
     completo: 'Televisão'
 });
-preencheObjeto(eletro1, ['Sala', 'game'], {
+preencheObjeto(eletro, ['Sala', 'game'], {
     status: 0,
     dqtd: 1,
     dwat: 12,
@@ -186,7 +186,7 @@ preencheObjeto(eletro1, ['Sala', 'game'], {
     total: 0,
     completo: 'Videogame'
 });
-preencheObjeto(eletro1, ['Sala', 'dvd'], {
+preencheObjeto(eletro, ['Sala', 'dvd'], {
     status: 0,
     dqtd: 1,
     dwat: 12,
@@ -200,7 +200,7 @@ preencheObjeto(eletro1, ['Sala', 'dvd'], {
     completo: 'Aparelho de DVD'
 });
 
-preencheObjeto(eletro1, ['Sala', 'som'], {
+preencheObjeto(eletro, ['Sala', 'som'], {
     status: 0,
     dqtd: 1,
     dwat: 80,
@@ -214,7 +214,7 @@ preencheObjeto(eletro1, ['Sala', 'som'], {
     completo: 'Aparelho de Som'
 });
 
-preencheObjeto(eletro1, ['Sala', 'climatizador'], {
+preencheObjeto(eletro, ['Sala', 'climatizador'], {
     status: 0,
     dqtd: 1,
     dwat: 1096,
@@ -228,12 +228,12 @@ preencheObjeto(eletro1, ['Sala', 'climatizador'], {
     completo: 'Climatizador'
 });
 
-preencheObjeto(eletro1, ['Sala', 'total'], 0);
+preencheObjeto(eletro, ['Sala', 'total'], 0);
 
-preencheObjeto(eletro1, ['Sala', 'totalwatts'], 0);
+preencheObjeto(eletro, ['Sala', 'totalwatts'], 0);
 
 
-preencheObjeto(eletro1, ['Cozinha', 'luz'], {
+preencheObjeto(eletro, ['Cozinha', 'luz'], {
     status: 0,
     dqtd: 1,
     dwat: 25,
@@ -247,7 +247,7 @@ preencheObjeto(eletro1, ['Cozinha', 'luz'], {
     completo: 'Lâmpada'
 });
 
-preencheObjeto(eletro1, ['Cozinha', 'geladeira'], {
+preencheObjeto(eletro, ['Cozinha', 'geladeira'], {
     status: 0,
     dqtd: 1,
     dwat: 5000,
@@ -261,7 +261,7 @@ preencheObjeto(eletro1, ['Cozinha', 'geladeira'], {
     completo: 'Geladeira'
 });
 
-preencheObjeto(eletro1, ['Cozinha', 'microondas'], {
+preencheObjeto(eletro, ['Cozinha', 'microondas'], {
     status: 0,
     dqtd: 1,
     dwat: 1000,
@@ -275,7 +275,7 @@ preencheObjeto(eletro1, ['Cozinha', 'microondas'], {
     completo: 'Microondas'
 });
 
-preencheObjeto(eletro1, ['Cozinha', 'forno'], {
+preencheObjeto(eletro, ['Cozinha', 'forno'], {
     status: 0,
     dqtd: 1,
     dwat: 1500,
@@ -289,7 +289,7 @@ preencheObjeto(eletro1, ['Cozinha', 'forno'], {
     completo: 'Forno Elétrico'
 });
 
-preencheObjeto(eletro1, ['Cozinha', 'coifa'], {
+preencheObjeto(eletro, ['Cozinha', 'coifa'], {
     status: 0,
     dqtd: 1,
     dwat: 410,
@@ -303,11 +303,11 @@ preencheObjeto(eletro1, ['Cozinha', 'coifa'], {
     completo: 'Coifa'
 });
 
-preencheObjeto(eletro1, ['Cozinha', 'total'], 0);
+preencheObjeto(eletro, ['Cozinha', 'total'], 0);
 
-preencheObjeto(eletro1, ['Cozinha', 'totalwatts'], 0);
+preencheObjeto(eletro, ['Cozinha', 'totalwatts'], 0);
 
-preencheObjeto(eletro1, ['Lavanderia', 'luz'], {
+preencheObjeto(eletro, ['Lavanderia', 'luz'], {
     status: 0,
     dqtd: 1,
     dwat: 25,
@@ -321,7 +321,7 @@ preencheObjeto(eletro1, ['Lavanderia', 'luz'], {
     completo: 'Lâmpada'
 });
 
-preencheObjeto(eletro1, ['Lavanderia', 'mqlavar'], {
+preencheObjeto(eletro, ['Lavanderia', 'mqlavar'], {
     status: 0,
     dqtd: 1,
     dwat: 1350,
@@ -335,7 +335,7 @@ preencheObjeto(eletro1, ['Lavanderia', 'mqlavar'], {
     completo: 'Máquina de lavar roupas'
 });
 
-preencheObjeto(eletro1, ['Lavanderia', 'mqsecar'], {
+preencheObjeto(eletro, ['Lavanderia', 'mqsecar'], {
     status: 0,
     dqtd: 1,
     dwat: 1600,
@@ -349,11 +349,11 @@ preencheObjeto(eletro1, ['Lavanderia', 'mqsecar'], {
     completo: 'Máquina de secar roupas'
 });
 
-preencheObjeto(eletro1, ['Lavanderia', 'total'], 0);
+preencheObjeto(eletro, ['Lavanderia', 'total'], 0);
 
-preencheObjeto(eletro1, ['Lavanderia', 'totalwatts'], 0);
+preencheObjeto(eletro, ['Lavanderia', 'totalwatts'], 0);
 
-preencheObjeto(eletro1, ['Quarto', 'luz'], {
+preencheObjeto(eletro, ['Quarto', 'luz'], {
     status: 0,
     dqtd: 1,
     dwat: 25,
@@ -367,7 +367,7 @@ preencheObjeto(eletro1, ['Quarto', 'luz'], {
     completo: 'Lâmpada'
 });
 
-preencheObjeto(eletro1, ['Quarto', 'tv'], {
+preencheObjeto(eletro, ['Quarto', 'tv'], {
     status: 0,
     dqtd: 1,
     dwat: 85,
@@ -381,7 +381,7 @@ preencheObjeto(eletro1, ['Quarto', 'tv'], {
     completo: 'Televisão'
 });
 
-preencheObjeto(eletro1, ['Quarto', 'climatizador'], {
+preencheObjeto(eletro, ['Quarto', 'climatizador'], {
     status: 0,
     dqtd: 1,
     dwat: 822,
@@ -395,11 +395,11 @@ preencheObjeto(eletro1, ['Quarto', 'climatizador'], {
     completo: 'Climatizador'
 });
 
-preencheObjeto(eletro1, ['Quarto', 'total'], 0);
+preencheObjeto(eletro, ['Quarto', 'total'], 0);
 
-preencheObjeto(eletro1, ['Quarto', 'totalwatts'], 0);
+preencheObjeto(eletro, ['Quarto', 'totalwatts'], 0);
 
-preencheObjeto(eletro1, ['Quarto2', 'luz'], {
+preencheObjeto(eletro, ['Quarto2', 'luz'], {
     status: 0,
     dqtd: 1,
     dwat: 25,
@@ -413,7 +413,7 @@ preencheObjeto(eletro1, ['Quarto2', 'luz'], {
     completo: 'Lâmpada'
 });
 
-preencheObjeto(eletro1, ['Quarto2', 'abajur'], {
+preencheObjeto(eletro, ['Quarto2', 'abajur'], {
     status: 0,
     dqtd: 1,
     dwat: 2,
@@ -427,11 +427,11 @@ preencheObjeto(eletro1, ['Quarto2', 'abajur'], {
     completo: 'Abajur'
 });
 
-preencheObjeto(eletro1, ['Quarto2', 'total'], 0);
+preencheObjeto(eletro, ['Quarto2', 'total'], 0);
 
-preencheObjeto(eletro1, ['Quarto2', 'totalwatts'], 0);
+preencheObjeto(eletro, ['Quarto2', 'totalwatts'], 0);
 
-preencheObjeto(eletro1, ['Banheiro', 'luz'], {
+preencheObjeto(eletro, ['Banheiro', 'luz'], {
     status: 0,
     dqtd: 1,
     dwat: 2,
@@ -445,7 +445,7 @@ preencheObjeto(eletro1, ['Banheiro', 'luz'], {
     completo: 'Lâmpada'
 });
 
-preencheObjeto(eletro1, ['Banheiro', 'chuveiro'], {
+preencheObjeto(eletro, ['Banheiro', 'chuveiro'], {
     status: 0,
     dqtd: 1,
     dwat: 7000,
@@ -459,11 +459,11 @@ preencheObjeto(eletro1, ['Banheiro', 'chuveiro'], {
     completo: 'Chuveiro'
 });
 
-preencheObjeto(eletro1, ['Banheiro', 'total'], 0);
+preencheObjeto(eletro, ['Banheiro', 'total'], 0);
 
-preencheObjeto(eletro1, ['Banheiro', 'totalwatts'], 0);
+preencheObjeto(eletro, ['Banheiro', 'totalwatts'], 0);
 
-preencheObjeto(eletro1, ['Banheiro1', 'luz'], {
+preencheObjeto(eletro, ['Banheiro1', 'luz'], {
     status: 0,
     dqtd: 1,
     dwat: 25,
@@ -477,7 +477,7 @@ preencheObjeto(eletro1, ['Banheiro1', 'luz'], {
     completo: 'Lâmpada'
 });
 
-preencheObjeto(eletro1, ['Banheiro1', 'chuveiro'], {
+preencheObjeto(eletro, ['Banheiro1', 'chuveiro'], {
     status: 0,
     dqtd: 1,
     dwat: 7000,
@@ -491,11 +491,11 @@ preencheObjeto(eletro1, ['Banheiro1', 'chuveiro'], {
     completo: 'Chuveiro'
 });
 
-preencheObjeto(eletro1, ['Banheiro1', 'total'], 0);
+preencheObjeto(eletro, ['Banheiro1', 'total'], 0);
 
-preencheObjeto(eletro1, ['Banheiro1', 'totalwatts'], 0);
+preencheObjeto(eletro, ['Banheiro1', 'totalwatts'], 0);
 
-preencheObjeto(eletro1, ['Escritorio', 'luz'], {
+preencheObjeto(eletro, ['Escritorio', 'luz'], {
     status: 0,
     dqtd: 1,
     dwat: 25,
@@ -509,7 +509,7 @@ preencheObjeto(eletro1, ['Escritorio', 'luz'], {
     completo: 'Lâmpada'
 });
 
-preencheObjeto(eletro1, ['Escritorio', 'abajur'], {
+preencheObjeto(eletro, ['Escritorio', 'abajur'], {
     status: 0,
     dqtd: 1,
     dwat: 2,
@@ -523,7 +523,7 @@ preencheObjeto(eletro1, ['Escritorio', 'abajur'], {
     completo: 'Abajur'
 });
 
-preencheObjeto(eletro1, ['Escritorio', 'computador'], {
+preencheObjeto(eletro, ['Escritorio', 'computador'], {
     status: 0,
     dqtd: 1,
     dwat: 200,
@@ -537,11 +537,11 @@ preencheObjeto(eletro1, ['Escritorio', 'computador'], {
     completo: 'Computador (DESKTOP)'
 });
 
-preencheObjeto(eletro1, ['Escritorio', 'total'], 0);
+preencheObjeto(eletro, ['Escritorio', 'total'], 0);
 
-preencheObjeto(eletro1, ['Escritorio', 'totalwatts'], 0);
+preencheObjeto(eletro, ['Escritorio', 'totalwatts'], 0);
 
-preencheObjeto(eletro1, ['Quarto3', 'luz'], {
+preencheObjeto(eletro, ['Quarto3', 'luz'], {
     status: 0,
     dqtd: 1,
     dwat: 25,
@@ -555,9 +555,9 @@ preencheObjeto(eletro1, ['Quarto3', 'luz'], {
     completo: 'Lâmpada'
 });
 
-preencheObjeto(eletro1, ['Quarto3', 'total'], 0);
+preencheObjeto(eletro, ['Quarto3', 'total'], 0);
 
-preencheObjeto(eletro1, ['Quarto3', 'totalwatts'], 0);
+preencheObjeto(eletro, ['Quarto3', 'totalwatts'], 0);
 
 
 
@@ -757,7 +757,7 @@ function trocar() {
 }
 
 function def() {
-    for (iterador = 0; iterador <= 3; iterador++) {
+    for (let iterador = 0; iterador <= 3; iterador++) {
         $('#n' + grandezas[iterador]).attr('value',
             parseFloat(eletro[comod][eletr][('d' + grandezas[iterador])]));
     }
@@ -770,7 +770,7 @@ function limpar() {
 }
 
 function click1() {
-    for (iterador = 0; iterador <= 3; iterador++) {
+    for (let iterador = 0; iterador <= 3; iterador++) {
         $('#a' + grandezas[iterador]).attr('value', eletro[comod][eletr][('a' + grandezas[iterador])]);
     }
     $('.toConfig').css('display', '');
@@ -851,9 +851,9 @@ function imprimir() {
                         <tr><td>Comodo</td> <td style='text-align: center;'>Eletrodoméstico</td> <td style='text-align: center;'>Valor R$</td></tr>
         
         `);
-    for (iterador = 0; iterador < comodo.length; iterador++) {
+    for (let iterador = 0; iterador < comodo.length; iterador++) {
        const a = comodo[iterador];
-        for (iteradorAuxiliar = 0; iteradorAuxiliar < eletro[a].length; iteradorAuxiliar++) {
+        for (let iteradorAuxiliar = 0; iteradorAuxiliar < eletro[a].length; iteradorAuxiliar++) {
            const b = eletro[a][iteradorAuxiliar];
             if (eletro[a][b]['status'] == 1)
                 novaJanela.document.write("<tr><td>" + a + "</td> <td>" + b +
