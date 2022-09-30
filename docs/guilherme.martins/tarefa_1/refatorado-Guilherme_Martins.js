@@ -114,21 +114,21 @@ function load() {
     zero();
 }
 
-//antes era comodo
+
 let comodos = ['Escritorio', 'Cozinha', 'Lavanderia', 'Quarto', 'Sala', 'Banheiro', 'Quarto2', 'Quarto3', 'Banheiro1'];
 
-//antes era ale
+
 let grandezas = ['qtd', 'wat', 'dia', 'hrs'];
 
 
 function preencheObjeto(objeto, caminhoChave, valor) {
 	ultimoIndiceChave = caminhoChave.length-1;
-	for (let contador = 0; contador < ultimoIndiceChave; ++ contador) {
-		chave = caminhoChave[contador];
+	for (let iterador = 0; iterador < ultimoIndiceChave; ++ iterador) {
+		const chave = caminhoChave[iterador];
 		if (!(chave in objeto)){
 			objeto[chave] = {}
 		}
-		objeto = objeto[chave];
+		const objeto = objeto[chave];
 	}
 	objeto[caminhoChave[ultimoIndiceChave]] = valor;
 }
@@ -568,24 +568,22 @@ var totalwatts;
 
 
 var taxa;
-let visualizacao = false;
 
-//Substituir os css por ativações de ids/classes
-//que então vão possuir as características dos respectivos css
+
 
 function aumentar(a, b) {
-    if (!visualizacao ) {
-        $('#' + a).css({
-            'top': '0%',
-            'left': '0%',
-            'width': '100%',
-            'height': '100%'
-        });
+    $('#' + a).css({
+        'top': '0%',
+        'left': '0%',
+        'width': '100%',
+        'height': '100%'
+    })
+       
         oall();
         mudarDisplayElemento(`#${a}`,'');
         comod = b;
     }
-}
+
 
 function mudarDisplayElemento(elementoSelecionado, tipoDeDisplay) {
     const elemento = document.querySelector(elementoSelecionado);
@@ -623,8 +621,9 @@ function reduzir(idiv, top, left) {
 function switchAparelho(aparelho, comodo, status) {
     
     switch (aparelho) {
-        case 'luz': 
-            mudarDisplayElemento(`#${comodo}foco`, `${status? '':'none'}`);
+        case 'luz':
+            mudarDisplayElemento(`#${comodo}foco`, `${status ? '' : 'none'}`);
+            break;
 
         case 'tv': {
             if (browser == "Chrome" || browser == "Safari") {
@@ -633,19 +632,24 @@ function switchAparelho(aparelho, comodo, status) {
             } else {
                 $('#' + comodo + aparelho).attr('src', "./assets/images/simulador/Efeitos/" + aparelho + "on.gif");
             }
+            break;
         }
         
         case 'climatizador': {
-            mudarDisplayElemento(`#${comodo}${aparelho}ar`, `${status? 'none':''}`);
+            mudarDisplayElemento(`#${comodo}${aparelho}ar`, `${status ? 'none' : ''}`);
+            break;
         }
         case 'chuveiro': {
-            mudarDisplayElemento(`#${comodo}${aparelho}pingo`, `${status? 'none':''}`);
+            mudarDisplayElemento(`#${comodo}${aparelho}pingo`, `${status ? 'none' : ''}`);
+            break;
         }
         case 'abajur': {
-            mudarDisplayElemento(`#${comodo}${aparelho}abajur`, `${status? 'none':''}`);
+            mudarDisplayElemento(`#${comodo}${aparelho}abajur`, `${status ? 'none' : ''}`);
+            break;
         }
         case 'som': {
-            mudarDisplayElemento(`#${comodo}${aparelho}notas`, `${status? 'none':''}`);
+            mudarDisplayElemento(`#${comodo}${aparelho}notas`, `${status ? 'none' : ''}`);
+            break;
             }
             
     }
@@ -723,11 +727,11 @@ function fechar1() {
 
 function trocar() {
     torf = true;
-    for (i = 0; i <= 3; i++) {
-        if ($('#n' + ale[i]).attr('value') <= 0 ||
-            $('#n' + ale[i]).attr('value') == '') {
-            alert('O valor ' + ale[i] + ' não pode ser Negativo ou Nulo');
-            $('#n' + ale[i]).attr('value', '');
+    for (let iterador = 0; iterador <= 3; iterador++) {
+        if ($('#n' + grandezas[iterador]).attr('value') <= 0 ||
+            $('#n' + grandezas[iterador]).attr('value') == '') {
+            alert('O valor ' + grandezas[iterador] + ' não pode ser Negativo ou Nulo');
+            $('#n' + grandezas[iterador]).attr('value', '');
             torf = false;
         }
     }
@@ -742,9 +746,9 @@ function trocar() {
         torf = false;
     }
     if (torf != false) {
-        for (i = 0; i <= 3; i++) {
-            eletro[comod][eletr][('a' + ale[i])] = document
-                .getElementById(('n' + ale[i])).value
+        for (let iterador = 0; iterador <= 3; iterador++) {
+            eletro[comod][eletr][('a' + grandezas[iterador])] = document
+                .getElementById(('n' + grandezas[iterador])).value
         }
         limpar();
         calcular(comod, eletr);
@@ -753,21 +757,21 @@ function trocar() {
 }
 
 function def() {
-    for (i = 0; i <= 3; i++) {
-        $('#n' + ale[i]).attr('value',
-            parseFloat(eletro[comod][eletr][('d' + ale[i])]));
+    for (iterador = 0; iterador <= 3; iterador++) {
+        $('#n' + grandezas[iterador]).attr('value',
+            parseFloat(eletro[comod][eletr][('d' + grandezas[iterador])]));
     }
 }
 
 function limpar() {
-    for (i = 0; i <= 3; i++) {
-        document.getElementById(('n' + ale[i])).value = ''
+    for (let iterador = 0; iterador <= 3; iterador++) {
+        document.getElementById(('n' + grandezas[iterador])).value = ''
     }
 }
 
 function click1() {
-    for (i = 0; i <= 3; i++) {
-        $('#a' + ale[i]).attr('value', eletro[comod][eletr][('a' + ale[i])]);
+    for (iterador = 0; iterador <= 3; iterador++) {
+        $('#a' + grandezas[iterador]).attr('value', eletro[comod][eletr][('a' + grandezas[iterador])]);
     }
     $('.toConfig').css('display', '');
 }
@@ -796,7 +800,7 @@ function resize() {
 
 }
 
-// Valores padrões devem ser definidos no html
+
 function zero() {
     $('watts').attr('value', '0');
     $('result').attr('value', '0.00');
@@ -809,10 +813,10 @@ function listview() {
         .children('table')
         .append(
             "<tr><td>Comodo</td> <td style='text-align: center;'>Eletrodoméstico</td> <td style='text-align: center;'>Valor R$</td></tr>")
-    for (i = 0; i < comodo.length; i++) {
-        a = comodo[i];
-        for (j = 0; j < eletro[a].length; j++) {
-            b = eletro[a][j];
+    for (let iterador = 0; iterador < comodo.length; iterador++) {
+        const a = comodo[iterador];
+        for (let iteradorAuxiliar = 0; iteradorAuxiliar < eletro[a].length; iteradorAuxiliar++) {
+            const b = eletro[a][iteradorAuxiliar];
             if (eletro[a][b]['status'] == 1)
                 $('.listview').children('table').append(
                     "<tr ><td>" + a + "</td> <td>" + eletro[a][b]['completo'] +
@@ -835,24 +839,22 @@ function imprimir() {
             '',
             'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'
         );
-    novaJanela.document.write("<head>");
-    novaJanela.document
-        .write("<meta http-equiv='content-type' content='text/html; charset=iso-8859-1' />");
-    novaJanela.document
-        .write("<style tyle='text/css' media='print'>button{display: none;}</style>");
-    novaJanela.document
-        .write("<style tyle='text/css' media='all'>a{color: #0000FF;}</style>");
-    novaJanela.document.write("");
-    novaJanela.document.write("</head>");
-    novaJanela.document.write("<body>");
-    novaJanela.document.write("<table>");
-    novaJanela.document.write("<tbody>");
-    novaJanela.document
-        .write("<tr><td>Comodo</td> <td style='text-align: center;'>Eletrodoméstico</td> <td style='text-align: center;'>Valor R$</td></tr>")
-    for (i = 0; i < comodo.length; i++) {
-        a = comodo[i];
-        for (j = 0; j < eletro[a].length; j++) {
-            b = eletro[a][j];
+        novaJanela.document.write(`
+            <head>
+            <meta http-equiv='content-type' content='text/html; charset=iso-8859-1' />
+            <style tyle='text/css' media='print'>button{display: none;}</style>
+            <style tyle='text/css' media='all'>a{color: #0000FF;}</style>
+            </head>
+            <body>
+                <table>
+                    <tbody>
+                        <tr><td>Comodo</td> <td style='text-align: center;'>Eletrodoméstico</td> <td style='text-align: center;'>Valor R$</td></tr>
+        
+        `);
+    for (iterador = 0; iterador < comodo.length; iterador++) {
+       const a = comodo[iterador];
+        for (iteradorAuxiliar = 0; iteradorAuxiliar < eletro[a].length; iteradorAuxiliar++) {
+           const b = eletro[a][iteradorAuxiliar];
             if (eletro[a][b]['status'] == 1)
                 novaJanela.document.write("<tr><td>" + a + "</td> <td>" + b +
                     "</td> <td style='text-align: right;'>" +
@@ -860,10 +862,11 @@ function imprimir() {
                     "</td></tr>");
         }
     }
-    novaJanela.document.write("</tbody>");
-    novaJanela.document.write("</table>");
-    novaJanela.document
-        .write("<button type='button' onclick='javascript:window.print();'>Imprimir Página</button>");
-    novaJanela.document.write("</body>");
+    novaJanela.document.write(`
+                </tbody>
+            </table>
+        <button type='button' onclick='javascript:window.print();'>Imprimir Página</button>
+        </body>
+    `);
     return false;
 }
