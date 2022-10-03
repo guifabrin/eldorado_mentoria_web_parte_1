@@ -58,36 +58,32 @@ footer{
   background-color: var(--color_backgroud_header);
 }
 
-.letra_do_pesquisa{
+.cor{
   margin: 0 32% 0 32%;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   display: flex;  
-}
-
-.cor_azul_letra {
-  color: blue;
   font-size: 120px;
   font-family: Arial;
 }
 
-.cor_vermelha_letra{
+.cor .cor_azul_letra {
+  color: blue; 
+}
+
+.cor .cor_vermelha_letra{
   color: red;
   font-size: 120px;
   font-family: Arial;
 }
 
-.cor_amarela_letra{
+.cor .cor_amarela_letra{
   color: yellow;
-  font-size: 120px;
-  font-family: Arial;
 }
 
-.cor_verde_letra{
+.cor .cor_verde_letra{
   color: green;
-  font-size: 120px;
-  font-family: Arial;
 }
 
 .git{
@@ -116,7 +112,6 @@ h1{
 }
 
 .imagem_usuario{
-
   display: block;
   margin: 40px auto;
   border-radius: 50%;
