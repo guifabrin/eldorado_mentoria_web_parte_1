@@ -1,0 +1,174 @@
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
+
+  $color-green: #58fa7b;
+  $color_rocket: #7159c1;
+  $color_backgroud_header: rgba(0, 0, 0, 0.1);
+  $color_background_body: #282a36;
+  $color_background_footer: rgba(0, 0, 0, 0.1);
+  $color_lyrics: white;
+  
+  html {
+    height: 100%;
+  }
+  
+  body{
+    background: $color_background_body;
+    min-height: 100%;
+  }
+  
+  header{
+    background-color: $color_backgroud_header;
+    box-sizing: border-box;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: var(color_lyrics);
+  }
+  
+  main{
+    background-color: $color_background_body;
+    margin: 5% 10%;
+    padding: 0%;
+  }
+  
+  footer{
+    background-color:  $color_background_footer;
+    text-align: center;
+    align-items: center;
+    padding: 1.1%;
+    width: 100%;
+    margin: auto;
+    bottom: 0;
+  }
+  
+  .resultado{
+    position: relative;
+    width: 300px;
+    margin-left: 400px; 
+  }
+
+  label{
+    position: absolute;
+    color: #000;
+    font-size: 22px ;
+    top: 15px;
+    left: 30px;
+  }
+
+  #usuario{
+    font-family: sans-serif ;
+    font-size:14px ;
+    outline: none;
+    border-radius: 50px;
+    height: 22px;
+    width: 100%;
+    padding: 14px 30px 14px 70px;
+    border: 1px solid black ;
+
+    &::placeholder{
+      color: black;
+      font-family: sans-serif ;
+    }
+  }
+  
+  #botao{
+    padding: 1.10%;
+    padding: 10px;
+    border-radius: 5px;
+    color: $color_lyrics;
+    border: 2px solid black;
+    background-color: $color_backgroud_header;
+  }
+  
+  .cor{
+    margin: 0 32% 0 32%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex; 
+    font-size: 120px;
+    font-family: Arial; 
+  }
+  
+ .cor .cor_azul_letra {
+    color: blue;
+  }
+  
+  .cor .cor_vermelha_letra{
+    color: red;  
+  }
+  
+  .cor .cor_amarela_letra{
+    color: yellow;
+  }
+  
+ .cor .cor_verde_letra{
+    color: green;
+  }
+  
+  .git{
+    background-color: $color_backgroud_header;
+    padding: 25px;
+  }
+  
+  .logo_git{
+    width: 40px;
+    border-radius: 50px;
+  }
+  
+  h1{
+    color: $color_lyrics;
+    text-align: center;
+    margin: 0 1% 0 0;
+  }
+  
+  .repositorio{
+    padding: 2%;
+    margin: 0 2% 0 0;
+    align-items: center;
+    text-align: center;
+    color: $color_lyrics;
+    background-color: $color_background_body;
+  }
+  
+  .imagem_usuario{
+    display: block;
+    margin: 40px auto;
+    border-radius: 50%;
+    width: 25%;
+    height: 15%;
+  }
+  
+  .ver_perfil a{ 
+    align-items: center;
+    margin-top: 0;
+    font-size: 30px;
+    font-family: Arial;
+    color: $color_lyrics;
+    text-decoration: none; 
+  }
+  
+  .lista_repositorio ul{
+    margin: 30px 100px 0 30px;
+    color: $color_lyrics;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .lista_repositorio ul li{
+    margin: auto;
+    list-style-type: none;
+    border: solid;
+    border-width: 10px ;
+    width: 45%;
+  }
+  
+  .lista_repositorio ul li a{
+    color: $color_lyrics;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  
+  
