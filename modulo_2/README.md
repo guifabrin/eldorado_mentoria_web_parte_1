@@ -1,21 +1,31 @@
-# Mentoria WEB - Módulo 2
-Bem-vindo ao segundo módulo da mentoria WEB
+# Mentoria WEB - Módulo 2 😃
 
-## Objetivo
-Nosso objetivo com este passo é compreender o que é um servidor WEB e colocar nossa página em um servidor local WEB e publicar nossa página no Github.
+Bem-vindo ao segundo módulo da mentoria WEB! 🚀
 
-## Servidor WEB
-Referência [https://tudosobrehospedagemdesites.com.br/servidor-web/](https://tudosobrehospedagemdesites.com.br/servidor-web/)
+## Objetivo 🎯
 
-Entender como publicar uma página é importante para prover aos usuários um ponto de entrada no nosso projeto. Leia a referência e resuma (10 linhas) sobre o que você entendeu.
+Nosso objetivo neste passo é compreender o funcionamento de um servidor WEB e aprender como colocar nossa página em um servidor local WEB, assim como publicar nossa página no Github.
 
-Instale um dis servidores WEB abaixo e coloque sua página em funcionamento:
-- Apache2
-- Nginx
-- IIS
+## Servidor WEB 💻
 
-## Github
-Referência [https://docs.github.com/pt/pages/getting-started-with-github-pages/creating-a-github-pages-site](https://docs.github.com/pt/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+Referência: [https://tudosobrehospedagemdesites.com.br/servidor-web/](https://tudosobrehospedagemdesites.com.br/servidor-web/)
 
-Uma das formas de você guardar seu código e suas versões é utilizar um programa de versionamento. Neste módulo utilizaremos Git.
-Utilizando a Referência vamos subir nosso código no Git e publicar o mesmo em um servidor gratuíto que o github fornece.
+Entender como publicar uma página em um servidor é fundamental para disponibilizar um ponto de entrada para os usuários em nosso projeto. Após ler a referência, resuma em até 10 linhas o que você compreendeu e instale um dos servidores WEB abaixo para colocar sua página em funcionamento:
+
+- [Apache2](https://httpd.apache.org/)
+- [Nginx](https://nginx.org/)
+- [IIS](https://www.iis.net/)
+
+## Github 🐙
+
+Referência: [https://docs.github.com/pt/pages/getting-started-with-github-pages/creating-a-github-pages-site](https://docs.github.com/pt/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+
+O Github é uma ferramenta de versionamento de código amplamente utilizada. Neste módulo, utilizaremos o Git como programa de versionamento. Utilizando a referência fornecida, iremos aprender como subir nosso código no Git e publicá-lo em um servidor gratuito que o Github disponibiliza, chamado Github Pages.
+
+## Links úteis 🔗
+
+- [Documentação oficial do Apache HTTP Server](https://httpd.apache.org/docs/)
+- [Documentação oficial do Nginx](https://nginx.org/en/docs/)
+- [Documentação oficial do Internet Information Services (IIS)](https://docs.microsoft.com/pt-br/iis/)
+- [Documentação oficial do Git](https://git-scm.com/docs)
+- [Documentação oficial do Github Pages](https://docs.github.com/pt/pages)
